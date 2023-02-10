@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+}
+ .angel{
+    position: absolute;
+    width: 80px;
+    transition: all 0.5s;
+} 
+.angel:hover{
+    transform: rotateZ(360deg);
+}
+.top{display:flex;
+    margin-left: 35%;
+    justify-content: space-between;
+    .search{
+        position: relative;
+
+        input{
+         width: 400px;
+         border-radius: 10px;
+         outline-color: violet;
+         height: 25px;
+        }
+        img{
+            position: absolute;
+             left: 380px;
+            top: 6px;
+            width: 16px;
+        }
+       }
+        .signBtn{
+            background: linear-gradient(to right top,#a9def9,#7b2cbf);
+            border-radius: 40px;
+            padding: 10px; 
+        }
+       
+}
+.siRe{
+     display: none;
+    margin-left: 33%;
+    margin-top: 10%;
+    width: 35%;
+    height: 35%;
+    background-color:#c5d1dc;
+    border-radius: 10px;
+    position: fixed;
+    small{
+        color: #53718d;
+    }
+    img{
+         width: 30px;
+        position: absolute;
+       top:0;
+       right:0;
+    }
+    .siReNav{display: flex;
+        justify-content:space-around;
+        margin-top: 5%;
+        span{
+            width: 60px;
+            background-color:#e3d5ca ;
+            border-radius: 50px;
+            text-align: center;
+            color:rgb(255, 112, 255) ;
+        }
+    }
+    .siReMain{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+       .si{
+        // display: none;
+        .namePassword{
+            outline: none;
+            border: 0;
+            padding: 10px;
+            border-bottom: 3px solid rgb(150, 150, 240);
+            background-color: transparent;
+        }
+        .submit{
+            width: 180px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            border:0;
+            border-radius: 20px;
+            margin-top: 40px;
+            color: #fff;
+            background-image: linear-gradient(to left, #fd79a8, #a29bfe);
+        }
+       }
+       .re{
+        // display: none;
+        .namePassword{
+            outline: none;
+            border: 0;
+            padding: 10px;
+            border-bottom: 3px solid rgb(150, 150, 240);
+            background-color: transparent;
+        }
+        .submit{
+            width: 180px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            border:0;
+            border-radius: 20px;
+            margin-top: 40px;
+            color: #fff;
+            background-image: linear-gradient(to left, #fd79a8, #a29bfe);
+        }
+       }
+     
+        
+    }
+}
+.rotograph{
+    margin-top: 80px;
+    height: 100px;
+    width: 100%;
+    background-color: #a9def9;
+}
+.images{
+    height: 100px;
+    width: 100%;
+    background-color:#fd79a8;
+}
+.recommend{
+    height: 100px;
+    width: 100%;
+    background-color:violet;
+}
+.comment{
+    textarea {
+        margin-left: 25%;
+         width: 50%;
+        height: 10%; 
+        border: 8px solid pink;
+        border-radius: 20px;
+        outline: none;
+        resize: none;}
+        .release{
+            width: 60px;
+            background-color:#e3d5ca ;
+            border-radius: 50px;
+            text-align: center;
+            color:rgb(255, 112, 255) ;
+            font-size: 18px;
+        }
+        li{
+            width: 50%;
+            margin-left:25% ;
+            padding: 5px;
+            background-color:#a2d2ff;
+            margin-top: 20px;
+            list-style: none;
+            border-radius: 10px;
+            p{
+                margin-left: 90%;
+                width: 40px;
+                background-color:#e3d5ca ;
+                border-radius: 50px;
+                text-align: center;
+                color:rgb(255, 112, 255) ;
+            }
+        }
+}
