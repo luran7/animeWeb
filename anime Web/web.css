@@ -1,0 +1,458 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  background-image: linear-gradient(to bottom right, #252c71 -18%, #890fbd 33%, #953c7b 61%, #260350 100%);
+  background-size: cover;
+}
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+@keyframes move {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+li {
+  list-style: none;
+}
+.leftSide {
+  position: absolute;
+  width: 20%;
+  top: 100px;
+}
+.rightSide {
+  position: absolute;
+  width: 21%;
+  top: 100px;
+  right: 0px;
+}
+.angel {
+  position: absolute;
+  width: 80px;
+  transition: all 0.5s;
+}
+.angel:hover {
+  transform: rotateZ(360deg);
+}
+.top {
+  display: flex;
+  margin-left: 35%;
+  justify-content: space-between;
+}
+.top .search {
+  margin-top: 10px;
+  position: relative;
+}
+.top .search input {
+  width: 462px;
+  border-radius: 40px;
+  outline-color: violet;
+  height: 50px;
+  font-size: 20px;
+  border-color: transparent;
+}
+.top .search img {
+  position: absolute;
+  left: 420px;
+  top: 8px;
+  width: 34px;
+  cursor: pointer;
+}
+.top .signBtn {
+  height: 25px;
+  color: #0059ff;
+  background: linear-gradient(to right top, #a9def9, #7b2cbf);
+  border-radius: 20px;
+  padding: 15px;
+  line-height: 100%;
+  font-size: 22px;
+  cursor: pointer;
+}
+.siRe {
+  display: none;
+  margin-left: 33%;
+  margin-top: 100px;
+  width: 35%;
+  height: 440px;
+  border-radius: 20px;
+  position: fixed;
+  z-index: 2;
+}
+.siRe ::before {
+  content: "";
+  width: 102%;
+  height: 102%;
+  border-radius: 20px;
+  background-image: linear-gradient(var(--rotate), #edede9, #f5ebe0 43%, #d5bdaf);
+  position: absolute;
+  z-index: -19;
+  top: -1%;
+  left: -0.5%;
+  animation: spin 3s linear infinite;
+}
+.siRe small {
+  color: red;
+}
+.siRe img {
+  width: 30px;
+  position: absolute;
+  top: 3px;
+  right: 0;
+}
+.siRe .siReNav {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.siRe .siReNav span {
+  width: 80px;
+  height: 30px;
+  background-color: #e3d5ca;
+  border-radius: 50px;
+  text-align: center;
+  color: #ff70ff;
+  font-size: 25px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.siRe .siReMain {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.siRe .siReMain .si .namePassword {
+  width: 100%;
+  outline: none;
+  border: 0;
+  font-size: 20px;
+  border-bottom: 3px solid #9696f0;
+  background-color: transparent;
+}
+.siRe .siReMain .si .siUserNum {
+  margin-top: 20px;
+}
+.siRe .siReMain .si .siUserPassword {
+  margin-top: 30px;
+}
+.siRe .siReMain .si .submit {
+  width: 300px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 25px;
+  text-align: center;
+  border: 0;
+  border-radius: 30px;
+  margin-top: 70px;
+  color: #fff;
+  background-image: linear-gradient(to left, #fd79a8, #a29bfe);
+}
+.siRe .siReMain .re .namePassword {
+  width: 100%;
+  outline: none;
+  border: 0;
+  font-size: 20px;
+  padding: 10px;
+  border-bottom: 3px solid #9696f0;
+  background-color: transparent;
+}
+.siRe .siReMain .re .reUserNum {
+  margin-top: 20px;
+}
+.siRe .siReMain .re .reUserPassword {
+  margin-top: 30px;
+}
+.siRe .siReMain .re .submit {
+  width: 300px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 25px;
+  text-align: center;
+  border: 0;
+  border-radius: 30px;
+  margin-top: 70px;
+  color: #fff;
+  background-image: linear-gradient(to left, #fd79a8, #a29bfe);
+}
+.loaderBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 5;
+  display: none;
+}
+.loaderBackground .loader {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-top: 21%;
+  margin-left: 45%;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top-color: #d4a373;
+  animation: move 2s linear infinite;
+}
+.loaderBackground .loader::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top-color: #8338ec;
+  animation: move 3s linear infinite;
+}
+.loaderBackground .loader::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top-color: #d90429;
+  animation: move 1.5s linear infinite;
+}
+.rotograph {
+  width: 1000px;
+  height: 520px;
+  border-radius: 30px;
+  border: #7b2cbf 5px solid;
+  background-color: #7b2cbf;
+  margin-left: 20%;
+  margin-top: 35px;
+  position: relative;
+  overflow: hidden;
+}
+.rotograph .roImages {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  transition: 0.2s;
+  position: absolute;
+  left: 0;
+}
+.rotograph .roImages li {
+  width: 100%;
+  background-size: cover;
+}
+.rotograph .roImages li:nth-child(1) {
+  background-image: url(imges/cl.jpg);
+}
+.rotograph .roImages li:nth-child(2) {
+  background-image: url(imges/ra.jpg);
+}
+.rotograph .roImages li:nth-child(3) {
+  background-image: url(imges/re.png);
+}
+.rotograph .roImages li:nth-child(4) {
+  background-image: url(imges/se.jpg);
+}
+.rotograph .roImages li:nth-child(5) {
+  background-image: url(imges/乔西.jpeg);
+}
+.rotograph .roMinImages {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  right: -90px;
+  z-index: 1;
+  width: 40%;
+}
+.rotograph .roMinImages li {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  border: rgba(80, 60, 80, 0.1) solid;
+}
+.rotograph .roMinImages li:nth-child(1) {
+  background-image: url(imges/cl.jpg);
+}
+.rotograph .roMinImages li:nth-child(2) {
+  background-image: url(imges/ra.jpg);
+}
+.rotograph .roMinImages li:nth-child(3) {
+  background-image: url(imges/re.png);
+}
+.rotograph .roMinImages li:nth-child(4) {
+  background-image: url(imges/se.jpg);
+}
+.rotograph .roMinImages li:nth-child(5) {
+  background-image: url(imges/乔西.jpeg);
+}
+.changeButton {
+  width: 60%;
+  position: absolute;
+  left: 20.5%;
+  top: 294px;
+  display: flex;
+}
+.changeButton .buttonLeft {
+  width: 50px;
+  margin-right: 894px;
+  background-color: rgba(237, 129, 237, 0.4);
+  border-radius: 50%;
+  font-size: 50px;
+  color: #7c0ad8;
+}
+.changeButton .buttonRight {
+  width: 50px;
+  background-color: rgba(237, 129, 237, 0.4);
+  border-radius: 50%;
+  font-size: 50px;
+  color: #7c0ad8;
+}
+.mad {
+  position: relative;
+  height: 374px;
+  border: #fd79a8 5px solid;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.mad .madTitle {
+  margin-left: 46%;
+  width: 140px;
+  font-size: 30px;
+  background: linear-gradient(to bottom right, #ff0303, #0920ed 77%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.mad .madContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.mad .madContent li {
+  width: 24%;
+}
+.mad .madContent li .videoImage1 {
+  background-image: url(视频封面/伊蕾娜小天使.png);
+  cursor: pointer;
+}
+.mad .madContent li .videoImage2 {
+  background-image: url(视频封面/薰.png);
+  cursor: pointer;
+}
+.mad .madContent li .videoImage3 {
+  background-image: url(视频封面/团子.png);
+  cursor: pointer;
+}
+.mad .madContent li .videoImage4 {
+  background-image: url(视频封面/兵长.png);
+  cursor: pointer;
+}
+.mad .madContent li a:hover {
+  transform: scale(1.02);
+}
+.mad .madContent li a {
+  display: block;
+  width: 100%;
+  height: 274px;
+  border-radius: 8px;
+  background-size: cover;
+}
+.mad .madContent li p {
+  font-size: 20px;
+  background: linear-gradient(to bottom right, #d6ccc2, #d5bdaf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.mad .changeMad {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 20px;
+  color: #1976d2;
+}
+.images {
+  position: relative;
+  height: 710px;
+  border: #fd79a8 5px solid;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.images .imagesTitle {
+  margin-left: 42%;
+  width: 285px;
+  font-size: 30px;
+  background: linear-gradient(to bottom left, #e10909, #0920ed 109%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.images .imagesContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.images .imagesContent img:hover {
+  transform: scale(1.02);
+}
+.images .imagesContent img {
+  width: 24%;
+  border-radius: 10px;
+}
+.images .changeMad {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 20px;
+  color: #1976d2;
+}
+.comment textarea {
+  position: relative;
+  margin-left: 25%;
+  width: 50%;
+  height: 100px;
+  font-size: 20px;
+  border: 8px solid pink;
+  border-radius: 20px;
+  outline: none;
+  resize: none;
+}
+.comment .release {
+  font-size: 22px;
+  background-color: #faf9f9;
+  border-radius: 50px;
+  text-align: center;
+  color: #ff70ff;
+}
+.comment li {
+  width: 51%;
+  font-size: 20px;
+  margin-left: 25% ;
+  padding: 5px;
+  background-image: linear-gradient(to right bottom, #ae16ae, #aa90f9);
+  margin-top: 20px;
+  list-style: none;
+  border-radius: 10px;
+}
+.comment li p {
+  margin-left: 95%;
+  width: 40px;
+  border-radius: 50px;
+  text-align: center;
+  color: #ff70ff;
+}
