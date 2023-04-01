@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeWeb</title>
+    <link rel="icon" type="image/png" href="./imges/favicon.png">
+    <link rel="stylesheet" href="./web.css">
+    <script src="./web.js" defer></script>
+</head>
+
+<body>
+    <!-- 双侧图 -->
+    <img src="./imges/haimeng.png" alt="" class="leftSide">
+    <img src="./imges/sanjiu.png" alt="" class="rightSide">
+    <img src="./imges/angel.png" alt="" class="angel">
+    <!-- 搜索-导航栏 -->
+    <div class="top">
+        <!-- 搜索栏 -->
+        <div class="search">
+            <input type="text" placeholder="请输入你需要搜索的内容">
+            <img src="./imges/搜索.png" alt="">
+        </div>
+        <a href="#nav1" class="mad1">MAD/AMV区</a>
+        <a href="#nav2" class="images1">aImages区</a>
+        <a href="#nav3" class="comment1">comment区</a>
+        <!-- 登录/注册按钮 -->
+        <div class="signBtn">登录/注册</div>
+    </div>
+    <!-- 登录注册页面 -->
+    <div class="siRe" id="siRe">
+        <img src="./imges/叉号.png" alt="">
+        <div class="siReNav">
+            <span class="siBtn">登录</span><span class="reBtn">注册</span>
+        </div>
+        <div class="siReMain">
+            <div class="si">
+                <input type="text" placeholder="账号" class="namePassword siUserNum"><br>
+                <small id="siUserNum"></small><br>
+                <input type="password" placeholder="密码" class="namePassword siUserPassword"><br>
+                <small id='siUserPassword'></small><br>
+                <input type="submit" class="submit siSubmit" value="登录">
+            </div>
+            <div class="re">
+                <input type="text" placeholder="用户名" class="namePassword reUserNum"><br>
+                <small id="reUserNum"></small><br>
+                <input type="password" placeholder="密码" class="namePassword reUserPassword"><br>
+                <small id='reUserPassword'></small><br>
+                <input type="submit" class="submit reSubmit" value="注册">
+            </div>
+
+        </div>
+    </div>
+    <!-- 加载动画 -->
+    <div class="loaderBackground">
+        <div class="loader"></div>
+    </div>
+
+    <!-- 轮播图 -->
+    <div class="rotograph">
+        <div class="roImages">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </div>
+        <div class="roMinImages">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </div>
+    </div>
+    <div class="changeButton">
+        <div class="buttonLeft">﹤</div>
+        <div class="buttonRight">﹥</div>
+    </div>
+
+    <!-- mad区 -->
+    <div class="mad" id="nav1">
+        <div class="madTitle">AMV/MAD区</div>
+        <div class="madContent">
+            <li>
+                <a href="https://www.bilibili.com/video/BV19K411o7aR/?share_source=copy_web&vd_source=96e7da715feb5720d7be622620293549"
+                    class="videoImage1"></a>
+                <p>试着说一下我不漂亮吧，我不漂...不漂...不...我很漂亮！</p>
+            </li>
+            <li>
+                <a href="https://www.bilibili.com/video/BV13s411z7Xc/?share_source=copy_web&vd_source=96e7da715feb5720d7be622620293549"
+                    class="videoImage2"></a>
+                <p>此生无悔入四慌，来世愿做友人A</p>
+            </li>
+            <li>
+                <a href="https://www.bilibili.com/video/BV18Z4y1V7ZJ/?share_source=copy_web&vd_source=96e7da715feb5720d7be622620293549"
+                    class="videoImage3"></a>
+                <p>你唯一次的化妆，不知惊艳了多少人</p>
+            </li>
+            <li>
+                <a href="https://www.bilibili.com/video/BV1xL411579z/?share_source=copy_web&vd_source=96e7da715feb5720d7be622620293549
+            " class="videoImage4"></a>
+                <p>给我乖一点，不然你的肉就不能被整齐的削掉了</p>
+            </li>
+        </div>
+        <div onclick='location.href = "mad区.html"' class="changeMad">more need</div>
+    </div>
+    <!-- animeImages -->
+    <div class="images" id="nav2">
+        <div class="imagesTitle">Images Appreciation</div>
+        <div class="imagesContent">
+            <img src="./imagesAppreciation/1.jpg" alt="">
+            <img src="./imagesAppreciation/2.jpg" alt="">
+            <img src="./imagesAppreciation/3.jpg" alt="">
+            <img src="./imagesAppreciation/4.jpg" alt="">
+        </div>
+        <div onclick='location.href = "moreImages.html"' class="changeMad">more need</div>
+    </div>
+    <!-- comment area -->
+    <div class="comment" id="nav3">
+        <div class="commentName">Comment区</div>
+        <textarea name="" id="" cols="30" rows="10" placeholder="请君抒意"></textarea>
+        <span class="release">发布</span>
+        <ul class="words"></ul>
+    </div>
+</body>
+
+</html>
